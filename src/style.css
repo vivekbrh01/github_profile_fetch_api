@@ -1,0 +1,18 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	line-height: 1.4;
+}
+.container {
+	max-width: 700px;
+	margin: 0 auto;
+}
+.btn_wrapper {
+	width: 20%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
