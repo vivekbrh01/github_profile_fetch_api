@@ -17,18 +17,18 @@ export default class App extends React.Component {
 	}
 
 	componentDidMount() {
-		console.log("did mount");
-
 		fetch("https://api.github.com/users/vivekbrh01")
 			.then((res) => res.json())
 			.then((userInfo) => this.setState({ userInfo }));
 	}
+	
 	handleClick(props) {
 		console.log("Click", props);
 		fetch(`https://api.github.com/users/${props}`)
 			.then((res) => res.json())
 			.then((userInfo) => this.setState({ userInfo }));
 	}
+
 	render() {
 		return (
 			<div className="container ">
@@ -41,7 +41,7 @@ export default class App extends React.Component {
 					{this.state.userInfo ? (
 						<User details={this.state.userInfo} />
 					) : (
-						<h2>Loading...</h2>
+						<h2 className="loading">Loading...</h2>
 					)}
 				</div>
 			</div>
